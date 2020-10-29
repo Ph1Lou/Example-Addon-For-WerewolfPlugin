@@ -36,8 +36,6 @@
     </repositories>
 
     <dependencies>
-
-
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot</artifactId>
@@ -48,10 +46,8 @@
         <dependency>
             <groupId>com.github.Ph1Lou</groupId>
             <artifactId>WereWolfAPI</artifactId>
-            <version>master-SNAPSHOT</version>
+            <version>1.7-SNAPSHOT-SNAPSHOT</version>
         </dependency>
-
-
 
     </dependencies>
 </project>

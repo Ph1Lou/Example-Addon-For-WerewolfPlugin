@@ -14,8 +14,8 @@ import java.util.UUID;
 public class RoleExample extends RolesVillage {
 
 
-    public RoleExample(GetWereWolfAPI main, WereWolfAPI game, UUID uuid) {
-        super(main,game,uuid);
+    public RoleExample(GetWereWolfAPI main, WereWolfAPI game, UUID uuid, String key) {
+        super(main,game,uuid,key);
     }
 
     @EventHandler
@@ -35,20 +35,6 @@ public class RoleExample extends RolesVillage {
     public String getDescription() {
         return game.translate("werewolf.role.role_example.description");
     }
-
-
-
-    // Ne pas mettre de game.translate ici !!!!!!!!!!!!!
-    @Override
-    public String getDisplay() {
-        return "werewolf.role.role_example.display";
-    }
-
-    @Override
-    public boolean isDisplay(String s) {
-        return s.equals(getDisplay());
-    }
-
 
     @Override
     public void stolen(UUID uuid) {
