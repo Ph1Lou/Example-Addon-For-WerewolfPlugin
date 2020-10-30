@@ -46,7 +46,7 @@
         <dependency>
             <groupId>com.github.Ph1Lou</groupId>
             <artifactId>WereWolfAPI</artifactId>
-            <version>1.7-SNAPSHOT-SNAPSHOT</version>
+            <version>1.7-SNAPSHOT-59b7e299d6-1</version>
         </dependency>
 
     </dependencies>

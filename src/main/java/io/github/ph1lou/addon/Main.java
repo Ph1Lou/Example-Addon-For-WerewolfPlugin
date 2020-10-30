@@ -1,8 +1,6 @@
 package io.github.ph1lou.addon;
 
-import io.github.ph1lou.werewolfapi.GetWereWolfAPI;
-import io.github.ph1lou.werewolfapi.RoleRegister;
-import io.github.ph1lou.werewolfapi.WereWolfAPI;
+import io.github.ph1lou.werewolfapi.*;
 import io.github.ph1lou.werewolfapi.enumlg.Category;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -19,12 +17,18 @@ public class Main extends JavaPlugin {
 
         ww = (GetWereWolfAPI) Bukkit.getPluginManager().getPlugin("WereWolfPlugin");
 
-        ww.loadTranslation(this,"fr");
-        ww.getAddonsList().add(this);
+        RegisterManager registerManager = ww.getRegisterManager();
+
+        registerManager
+                .registerAddon(new AddonRegister("werewolf.unique_key","fr",this)
+                .addAuthors(UUID.fromString("056be797-2a0b-4807-9af5-37faf5384396"))
+                .setLore("Ceci est un addon d'exemple"));
 
         try {
-            RoleRegister exampleRole = new RoleRegister(this,ww,"werewolf.role.role_example.display").registerRole(RoleExample.class);
-            exampleRole.setLore(Arrays.asList("§fRole Example","§fFait par §bPh1Lou")).addCategory(Category.ADDONS).addCategory(Category.VILLAGER).create();
+            registerManager.registerRole(new RoleRegister("werewolf.unique_key","werewolf.role.role_example.display",RoleExample.class)
+                    .setLore(Arrays.asList("§fRole Example","§fFait par §bPh1Lou"))
+                    .addCategory(Category.ADDONS)
+                    .addCategory(Category.VILLAGER));
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
         }
