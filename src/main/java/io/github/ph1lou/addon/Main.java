@@ -2,6 +2,8 @@ package io.github.ph1lou.addon;
 
 import io.github.ph1lou.werewolfapi.*;
 import io.github.ph1lou.werewolfapi.enumlg.Category;
+import io.github.ph1lou.werewolfapi.enumlg.UniversalMaterial;
+import io.github.ph1lou.werewolfapi.utils.ItemBuilder;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -20,9 +22,17 @@ public class Main extends JavaPlugin {
         RegisterManager registerManager = ww.getRegisterManager();
 
         registerManager
-                .registerAddon(new AddonRegister("werewolf.unique_key","fr",this)
-                .addAuthors(UUID.fromString("056be797-2a0b-4807-9af5-37faf5384396"))
-                .setLore("Ceci est un addon d'exemple"));
+                .registerAddon(new AddonRegister("werewolf.unique_key",
+                        "fr",
+                        this,
+                        new ItemBuilder(UniversalMaterial.CARROT.getType())
+                                .setLore("Ceci est un Addon d'Exemple")
+                                .setDisplayName("Rôle Addon")
+                                .build()
+                )
+                .addAuthors("Ph1Lou",UUID.fromString("056be797-2a0b-4807-9af5-37faf5384396")));
+
+
 
         try {
             registerManager.registerRole(new RoleRegister("werewolf.unique_key","werewolf.role.role_example.display",RoleExample.class)
