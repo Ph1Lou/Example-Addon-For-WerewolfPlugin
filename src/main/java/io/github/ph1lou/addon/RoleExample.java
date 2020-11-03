@@ -36,15 +36,12 @@ public class RoleExample extends RolesVillage {
         return game.translate("werewolf.role.role_example.description");
     }
 
-    @Override
-    public void stolen(UUID uuid) {
-        //Si qqun récupère ce role en le volant
-    }
+
 
 
     @Override
-    public void recoverPotionEffect(Player player) {
-        super.recoverPotionEffect(player);
+    public void recoverPotionEffect() {
+        super.recoverPotionEffect();
         //à l'annonce des rôles et quand je rez
     }
 
