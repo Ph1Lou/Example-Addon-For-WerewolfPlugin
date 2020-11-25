@@ -21,8 +21,10 @@ public class Main extends JavaPlugin {
 
         RegisterManager registerManager = ww.getRegisterManager();
 
+        String addonKey = "werewolf.your_addon";
+
         registerManager
-                .registerAddon(new AddonRegister("werewolf.unique_key",
+                .registerAddon(new AddonRegister(addonKey,
                         "fr",
                         this,
                         new ItemBuilder(UniversalMaterial.CARROT.getType())
@@ -35,7 +37,7 @@ public class Main extends JavaPlugin {
 
 
         try {
-            registerManager.registerRole(new RoleRegister("werewolf.unique_key","werewolf.role.role_example.display",RoleExample.class)
+            registerManager.registerRole(new RoleRegister(addonKey,"werewolf.role.role_example.display",RoleExample.class)
                     .setLore(Arrays.asList("§fRole Example","§fFait par §bPh1Lou"))
                     .addCategory(Category.ADDONS)
                     .addCategory(Category.VILLAGER));

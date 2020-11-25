@@ -1,6 +1,6 @@
 {
   "werewolf": {
-    "unique_key": "Addon Exemple",
+    "your_addon": "Addon Exemple",
     "role": {
       "role_example": {
         "display": "Role Example",
