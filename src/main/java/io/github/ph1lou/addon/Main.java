@@ -1,17 +1,15 @@
 package io.github.ph1lou.addon;
 
-import io.github.ph1lou.werewolfapi.*;
+import io.github.ph1lou.werewolfapi.GetWereWolfAPI;
 import io.github.ph1lou.werewolfapi.enums.Category;
 import io.github.ph1lou.werewolfapi.enums.UniversalMaterial;
 import io.github.ph1lou.werewolfapi.registers.AddonRegister;
 import io.github.ph1lou.werewolfapi.registers.RegisterManager;
 import io.github.ph1lou.werewolfapi.registers.RoleRegister;
-import io.github.ph1lou.werewolfapi.utils.ItemBuilder;
 import org.bukkit.Bukkit;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.util.Arrays;
 import java.util.UUID;
 
 public class Main extends JavaPlugin {
