@@ -4,8 +4,10 @@
     "role": {
       "role_example": {
         "display": "Role Example",
-        "description": "Blabla"
-      }
+        "description": "Blabla",
+        "item": "Role fait par Ph1Lou"
+      },
+      "description": "pour s'entrainer à faire des addons"
     }
   }
 }

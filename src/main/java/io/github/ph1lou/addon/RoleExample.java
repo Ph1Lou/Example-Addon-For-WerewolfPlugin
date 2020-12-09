@@ -2,20 +2,17 @@ package io.github.ph1lou.addon;
 
 
 import io.github.ph1lou.werewolfapi.GetWereWolfAPI;
-import io.github.ph1lou.werewolfapi.WereWolfAPI;
+import io.github.ph1lou.werewolfapi.PlayerWW;
 import io.github.ph1lou.werewolfapi.events.DayEvent;
 import io.github.ph1lou.werewolfapi.events.NightEvent;
 import io.github.ph1lou.werewolfapi.rolesattributs.RolesVillage;
-import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
-
-import java.util.UUID;
 
 public class RoleExample extends RolesVillage {
 
 
-    public RoleExample(GetWereWolfAPI main, WereWolfAPI game, UUID uuid, String key) {
-        super(main,game,uuid,key);
+    public RoleExample(GetWereWolfAPI main, PlayerWW playerWW, String key) {
+        super(main,playerWW,key);
     }
 
     @EventHandler
@@ -36,7 +33,10 @@ public class RoleExample extends RolesVillage {
         return game.translate("werewolf.role.role_example.description");
     }
 
+    @Override
+    public void recoverPower() {
 
+    }
 
 
     @Override

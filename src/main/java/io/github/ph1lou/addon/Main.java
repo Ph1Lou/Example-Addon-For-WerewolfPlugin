@@ -1,10 +1,14 @@
 package io.github.ph1lou.addon;
 
 import io.github.ph1lou.werewolfapi.*;
-import io.github.ph1lou.werewolfapi.enumlg.Category;
-import io.github.ph1lou.werewolfapi.enumlg.UniversalMaterial;
+import io.github.ph1lou.werewolfapi.enums.Category;
+import io.github.ph1lou.werewolfapi.enums.UniversalMaterial;
+import io.github.ph1lou.werewolfapi.registers.AddonRegister;
+import io.github.ph1lou.werewolfapi.registers.RegisterManager;
+import io.github.ph1lou.werewolfapi.registers.RoleRegister;
 import io.github.ph1lou.werewolfapi.utils.ItemBuilder;
 import org.bukkit.Bukkit;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Arrays;
@@ -26,19 +30,16 @@ public class Main extends JavaPlugin {
         registerManager
                 .registerAddon(new AddonRegister(addonKey,
                         "fr",
-                        this,
-                        new ItemBuilder(UniversalMaterial.CARROT.getType())
-                                .setLore("Ceci est un Addon d'Exemple")
-                                .setDisplayName("Rôle Addon")
-                                .build()
-                )
-                .addAuthors("Ph1Lou",UUID.fromString("056be797-2a0b-4807-9af5-37faf5384396")));
+                        this)
+                        .setItem(new ItemStack(UniversalMaterial.CARROT.getType()))
+                        .setLoreKey("werewolf.role.description")
+                        .addAuthors("Ph1Lou",UUID.fromString("056be797-2a0b-4807-9af5-37faf5384396")));
 
 
 
         try {
             registerManager.registerRole(new RoleRegister(addonKey,"werewolf.role.role_example.display",RoleExample.class)
-                    .setLore(Arrays.asList("§fRole Example","§fFait par §bPh1Lou"))
+                    .setLoreKey("werewolf.role.role_example.item")
                     .addCategory(Category.ADDONS)
                     .addCategory(Category.VILLAGER));
         } catch (NoSuchMethodException e) {
