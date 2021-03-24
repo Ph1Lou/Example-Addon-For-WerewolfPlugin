@@ -30,14 +30,14 @@ public class Main extends JavaPlugin {
                         "fr",
                         this)
                         .setItem(new ItemStack(UniversalMaterial.CARROT.getType()))
-                        .setLoreKey("werewolf.role.description")
+                        .addLoreKey("werewolf.role.description")
                         .addAuthors("Ph1Lou",UUID.fromString("056be797-2a0b-4807-9af5-37faf5384396")));
 
 
 
         try {
             registerManager.registerRole(new RoleRegister(addonKey,"werewolf.role.role_example.display",RoleExample.class)
-                    .setLoreKey("werewolf.role.role_example.item")
+                    .addLoreKey("werewolf.role.role_example.item")
                     .addCategory(Category.ADDONS)
                     .addCategory(Category.VILLAGER));
         } catch (NoSuchMethodException e) {
