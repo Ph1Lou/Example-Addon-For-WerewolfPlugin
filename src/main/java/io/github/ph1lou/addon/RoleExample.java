@@ -2,16 +2,16 @@ package io.github.ph1lou.addon;
 
 
 import io.github.ph1lou.werewolfapi.GetWereWolfAPI;
-import io.github.ph1lou.werewolfapi.PlayerWW;
+import io.github.ph1lou.werewolfapi.IPlayerWW;
 import io.github.ph1lou.werewolfapi.events.DayEvent;
 import io.github.ph1lou.werewolfapi.events.NightEvent;
-import io.github.ph1lou.werewolfapi.rolesattributs.RolesVillage;
+import io.github.ph1lou.werewolfapi.rolesattributs.RoleVillage;
 import org.bukkit.event.EventHandler;
 
-public class RoleExample extends RolesVillage {
+public class RoleExample extends RoleVillage {
 
 
-    public RoleExample(GetWereWolfAPI main, PlayerWW playerWW, String key) {
+    public RoleExample(GetWereWolfAPI main, IPlayerWW playerWW, String key) {
         super(main,playerWW,key);
     }
 
