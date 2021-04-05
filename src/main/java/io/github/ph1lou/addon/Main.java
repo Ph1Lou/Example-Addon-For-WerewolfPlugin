@@ -6,7 +6,6 @@ import io.github.ph1lou.werewolfapi.enums.UniversalMaterial;
 import io.github.ph1lou.werewolfapi.registers.AddonRegister;
 import io.github.ph1lou.werewolfapi.registers.IRegisterManager;
 import io.github.ph1lou.werewolfapi.registers.RoleRegister;
-import org.bukkit.Bukkit;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -19,7 +18,7 @@ public class Main extends JavaPlugin {
     @Override
     public void onEnable() {
 
-        ww = (GetWereWolfAPI) Bukkit.getPluginManager().getPlugin("WereWolfPlugin");
+        ww =  getServer().getServicesManager().load(GetWereWolfAPI.class);
 
         IRegisterManager registerManager = ww.getRegisterManager();
 
