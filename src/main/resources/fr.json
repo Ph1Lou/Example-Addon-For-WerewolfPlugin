@@ -8,6 +8,11 @@
         "item": "Role fait par Ph1Lou"
       },
       "description": "pour s'entrainer à faire des addons"
+    },
+    "commands": {
+      "leave": {
+        "name": "enfuir"
+      }
     }
   }
 }
