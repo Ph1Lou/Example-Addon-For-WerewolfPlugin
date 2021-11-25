@@ -22,19 +22,23 @@ public class Main extends JavaPlugin {
     @Override
     public void onEnable() {
 
-        ww =  getServer().getServicesManager().load(GetWereWolfAPI.class);
+        this.ww =  getServer().getServicesManager().load(GetWereWolfAPI.class);
+
+        if(this.ww == null){
+            return;
+        }
 
         IRegisterManager registerManager = ww.getRegisterManager();
 
 
 
-        String addonKey = "werewolf.your_addon";
+        String addonKey = "your_addon.your_addon";
 
 
         registerManager.registerScenario(new ScenarioRegister(addonKey,"",new Scenario(ww)));
 
         registerManager.registerCommands(new CommandRegister(addonKey,
-                "werewolf.commands.leave.name",
+                "your_addon.commands.leave.name",
                 new CommandExample())
         .addArgNumbers(2)
         .addArgNumbers(3)
@@ -49,12 +53,12 @@ public class Main extends JavaPlugin {
                         "fr",
                         this)
                         .setItem(new ItemStack(UniversalMaterial.CARROT.getType()))
-                        .addLoreKey("werewolf.role.description")
+                        .addLoreKey("your_addon.role.description")
                         .addAuthors("Ph1Lou",UUID.fromString("056be797-2a0b-4807-9af5-37faf5384396")));
 
         try {
-            registerManager.registerRole(new RoleRegister(addonKey,"werewolf.role.role_example.display",RoleExample.class)
-                    .addLoreKey("werewolf.role.role_example.item")
+            registerManager.registerRole(new RoleRegister(addonKey,"your_addon.role.role_example.display",RoleExample.class)
+                    .addLoreKey("your_addon.role.role_example.item")
                     .addCategory(Category.ADDONS)
                     .addCategory(Category.VILLAGER));
         } catch (NoSuchMethodException e) {

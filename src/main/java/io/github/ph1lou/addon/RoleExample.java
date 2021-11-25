@@ -1,17 +1,17 @@
 package io.github.ph1lou.addon;
 
 
-import io.github.ph1lou.werewolfapi.GetWereWolfAPI;
 import io.github.ph1lou.werewolfapi.IPlayerWW;
-import io.github.ph1lou.werewolfapi.events.DayEvent;
-import io.github.ph1lou.werewolfapi.events.NightEvent;
+import io.github.ph1lou.werewolfapi.WereWolfAPI;
+import io.github.ph1lou.werewolfapi.events.game.day_cycle.DayEvent;
+import io.github.ph1lou.werewolfapi.events.game.day_cycle.NightEvent;
 import io.github.ph1lou.werewolfapi.rolesattributs.RoleVillage;
 import org.bukkit.event.EventHandler;
 
 public class RoleExample extends RoleVillage {
 
 
-    public RoleExample(GetWereWolfAPI main, IPlayerWW playerWW, String key) {
+    public RoleExample(WereWolfAPI main, IPlayerWW playerWW, String key) {
         super(main,playerWW,key);
     }
 
@@ -30,7 +30,7 @@ public class RoleExample extends RoleVillage {
 
     @Override
     public String getDescription() {
-        return game.translate("werewolf.role.role_example.description");
+        return game.translate("your_addon.role.role_example.description");
     }
 
     @Override
