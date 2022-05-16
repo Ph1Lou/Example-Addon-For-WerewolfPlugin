@@ -13,6 +13,9 @@
       "leave": {
         "name": "enfuir"
       }
+    },
+    "scenarios": {
+      "name": "Scénario Test"
     }
   }
 }

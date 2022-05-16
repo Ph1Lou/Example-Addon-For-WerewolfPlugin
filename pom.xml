@@ -48,9 +48,9 @@
         </dependency>
 
         <dependency>
-            <groupId>com.github.Ph1Lou</groupId>
+            <groupId>fr.ph1lou</groupId>
             <artifactId>WerewolfAPI</artifactId>
-            <version>1.8_jitpack-SNAPSHOT</version>
+            <version>1.10</version>
         </dependency>
 
     </dependencies>

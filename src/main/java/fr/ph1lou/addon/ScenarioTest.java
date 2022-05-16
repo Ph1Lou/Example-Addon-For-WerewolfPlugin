@@ -1,14 +1,17 @@
-package io.github.ph1lou.addon;
+package fr.ph1lou.addon;
 
-import io.github.ph1lou.werewolfapi.GetWereWolfAPI;
-import io.github.ph1lou.werewolfapi.ListenerManager;
+import fr.ph1lou.werewolfapi.GetWereWolfAPI;
+import fr.ph1lou.werewolfapi.annotations.Scenario;
+import fr.ph1lou.werewolfapi.listeners.impl.ListenerManager;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Chicken;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.entity.EntityDeathEvent;
 
-public class Scenario extends ListenerManager {
-    public Scenario(GetWereWolfAPI main) {
+
+@Scenario(key = "your_addon.scenarios.name")
+public class ScenarioTest extends ListenerManager {
+    public ScenarioTest(GetWereWolfAPI main) {
         super(main);
     }
 

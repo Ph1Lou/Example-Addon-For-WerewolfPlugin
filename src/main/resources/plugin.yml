@@ -1,7 +1,7 @@
 name: pluginexample
 version: "1.0"
 author: Ph1Lou
-main: io.github.ph1lou.addon.Main
+main: fr.ph1lou.addon.Main
 load: STARTUP
 depend: [WereWolfPlugin]
 
