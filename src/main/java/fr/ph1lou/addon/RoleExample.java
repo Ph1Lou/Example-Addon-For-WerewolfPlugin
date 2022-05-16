@@ -13,7 +13,8 @@ import fr.ph1lou.werewolfapi.role.utils.DescriptionBuilder;
 import org.bukkit.event.EventHandler;
 import org.jetbrains.annotations.NotNull;
 
-@Role(key = "your_addon.role.role_example.display", category = Category.VILLAGER, attributes = {})
+@Role(key = "your_addon.role.role_example.display",
+        category = Category.VILLAGER, attributes = {})
 public class RoleExample extends RoleVillage {
 
     public RoleExample(WereWolfAPI main, IPlayerWW playerWW) {
