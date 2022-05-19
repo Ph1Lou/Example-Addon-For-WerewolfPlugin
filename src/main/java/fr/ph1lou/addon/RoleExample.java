@@ -3,6 +3,7 @@ package fr.ph1lou.addon;
 
 import fr.ph1lou.werewolfapi.annotations.Role;
 import fr.ph1lou.werewolfapi.enums.Category;
+import fr.ph1lou.werewolfapi.enums.RoleAttribute;
 import fr.ph1lou.werewolfapi.events.game.day_cycle.DayEvent;
 import fr.ph1lou.werewolfapi.events.game.day_cycle.NightEvent;
 import fr.ph1lou.werewolfapi.game.WereWolfAPI;
@@ -14,7 +15,8 @@ import org.bukkit.event.EventHandler;
 import org.jetbrains.annotations.NotNull;
 
 @Role(key = "your_addon.role.role_example.display",
-        category = Category.VILLAGER, attributes = {})
+        category = Category.VILLAGER,
+        attributes = RoleAttribute.VILLAGER)
 public class RoleExample extends RoleVillage {
 
     public RoleExample(WereWolfAPI main, IPlayerWW playerWW) {
