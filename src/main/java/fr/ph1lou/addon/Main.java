@@ -19,6 +19,6 @@ public class Main extends JavaPlugin {
     @Override
     public void onEnable() {
 
-        this.ww =  getServer().getServicesManager().load(GetWereWolfAPI.class);
+        this.ww =  getServer().getServicesManager().load(GetWereWolfAPI.class).getInvManager();
     }
 }

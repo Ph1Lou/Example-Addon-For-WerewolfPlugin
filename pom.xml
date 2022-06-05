@@ -51,6 +51,7 @@
             <groupId>fr.ph1lou</groupId>
             <artifactId>WerewolfAPI</artifactId>
             <version>1.10</version>
+            <scope>provided</scope>
         </dependency>
 
     </dependencies>
